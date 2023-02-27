@@ -16,9 +16,11 @@ import java.io.IOException;
 public class SmsRestController {
 
     @PostMapping
-    public void smsSend(String phone, String pin) throws IOException {
+    public String smsSend(String phone, String pin) throws IOException {
 
         SmsSend smsSend = new SmsSend();
         smsSend.addSms(phone, pin);
+
+        return "Возвращаем статус о доставке, дату и sms_id";
     }
 }
