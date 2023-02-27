@@ -1,0 +1,5 @@
+server:
+  port: 3232
+  servlet:
+    context-path: /sms
+location: img, voice
